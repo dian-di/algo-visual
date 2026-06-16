@@ -1,5 +1,5 @@
-{
-  "$schema": "https://biomejs.dev/schemas/2.4.10/schema.json",
+﻿{
+  "$schema": "https://biomejs.dev/schemas/2.5.0/schema.json",
   "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "files": {
     "includes": [
@@ -37,7 +37,7 @@
         "noExplicitAny": "off",
         "noConsole": { "level": "off", "options": { "allow": ["log"] } }
       },
-      "recommended": true,
+      "preset": "recommended",
       "correctness": {
         "noChildrenProp": "off",
         "noUnusedVariables": "warn",
@@ -67,6 +67,11 @@
       "quoteStyle": "single",
       "jsxQuoteStyle": "single",
       "semicolons": "asNeeded"
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
     }
   }
 }

@@ -1,15 +1,20 @@
-import { Button } from '@/components/ui/button'
-import { useDemoStore } from '@/store/demo'
-
+import TwoSum from '@/components/leetcode/lc_1'
+import RemoveElement from '@/components/leetcode/lc_27'
 export default function Home() {
-  const { demo, increment } = useDemoStore()
   return (
     <div>
-      <img src='images/demo.jpg' alt='' className='w-12' />
-      <div>{demo.count}</div>
-      <Button onClick={increment} className='text-red-500'>
-        Click me
-      </Button>
+      <h1>Home</h1>
+      <div className='grid grid-cols-3 gap-4'>
+        <div>
+          <TwoSum />
+        </div>
+        <div>
+          <RemoveElement />
+        </div>
+        <div>
+          <TwoSum />
+        </div>
+      </div>
     </div>
   )
 }
