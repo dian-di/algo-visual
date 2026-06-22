@@ -1,11 +1,11 @@
-import { Pause, Play, SkipBack, SkipForward } from 'lucide-react'
+﻿import { Pause, Play, SkipBack, SkipForward } from 'lucide-react'
 import type { PlaybackControlsProps } from './types'
 import { usePlayback } from './usePlayback'
 
 /**
  * PlaybackControls play/pause and prev/next buttons.
  */
-export function PlaybackControls({ controller, className }: PlaybackControlsProps) {
+export function PlaybackControls<TScene>({ controller, className }: PlaybackControlsProps<TScene>) {
   const snapshot = usePlayback(controller)
   const { playing } = snapshot
 

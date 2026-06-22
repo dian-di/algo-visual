@@ -1,4 +1,4 @@
-﻿import type { PointPointer, PathPointer } from '../../pointer'
+﻿import type { PathPointer, PointPointer } from '../../pointer'
 
 export interface GraphNode {
   id: string

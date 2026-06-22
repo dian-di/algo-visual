@@ -4,13 +4,13 @@ import type { AlgoScene } from '../../algo-engine/src/types'
 import type { RenderNode } from '../../renderer-sdk/src'
 
 /** Props shared by player sub-components */
-export interface PlaybackControlsProps {
-  controller: PlaybackController<AlgoScene>
+export interface PlaybackControlsProps<TScene = AlgoScene> {
+  controller: PlaybackController<TScene>
   className?: string
 }
 
-export interface TimelineScrubberProps {
-  controller: PlaybackController<AlgoScene>
+export interface TimelineScrubberProps<TScene = AlgoScene> {
+  controller: PlaybackController<TScene>
   className?: string
 }
 

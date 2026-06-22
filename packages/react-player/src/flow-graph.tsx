@@ -35,7 +35,7 @@ function forceLayout(
   const pos = new Map<string, { x: number; y: number }>()
   const disp = new Map<string, { x: number; y: number }>()
 
-  // Grid initial placement � gives the layout a structured starting point
+  // Grid initial placement gives the layout a structured starting point
   const cols = Math.ceil(Math.sqrt(n))
   const cellW = 140
   const cellH = 120
@@ -47,13 +47,13 @@ function forceLayout(
     disp.set(id, { x: 0, y: 0 })
   })
 
-  // Ideal spring length � scales with canvas area
+  // Ideal spring length scales with canvas area
   const rows = Math.ceil(n / cols)
   const k = Math.sqrt((cols * cellW * (rows * cellH)) / n) * 1.15
 
   const ITERS = 100
   for (let iter = 0; iter < ITERS; iter++) {
-    // Temperature cools linearly � large moves early, fine-tuning late
+    // Temperature cools linearly large moves early, fine-tuning late
     const temp = k * 0.5 * (1 - iter / ITERS)
 
     // Reset displacements

@@ -2,9 +2,9 @@
 import { usePlayback } from './usePlayback'
 
 /**
- * TimelineScrubber — a slider for seeking through timeline frames.
+ * TimelineScrubber -- a slider for seeking through timeline frames.
  */
-export function TimelineScrubber({ controller, className }: TimelineScrubberProps) {
+export function TimelineScrubber<TScene>({ controller, className }: TimelineScrubberProps<TScene>) {
   const snapshot = usePlayback(controller)
   const max = Math.max(snapshot.total - 1, 0)
 
@@ -19,7 +19,7 @@ export function TimelineScrubber({ controller, className }: TimelineScrubberProp
         onChange={(e) => controller.cursor.seek(Number(e.target.value))}
         className='h-2 w-full cursor-pointer appearance-none rounded bg-muted accent-primary'
       />
-      <div className='mt-1 flex justify-between text-xs text-muted-foreground'>
+      <div className='mt-1 flex justify-between text-muted-foreground text-xs'>
         <span>
           {snapshot.index + 1} / {snapshot.total}
         </span>
